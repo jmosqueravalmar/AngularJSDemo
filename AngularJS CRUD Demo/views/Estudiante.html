@@ -1,0 +1,9 @@
+
+<kendo-mobile-view id="estudiantes" k-title="'Lista de Estudiantes'" k-layout="'default'" k-on-before-show="filterFeatured()" ng-controller="EstudianteController">
+    <kendo-mobile-list-view id="listaEstudiantes" k-template="templates.estudianteTemplate" k-data-source="EstudianteServices.estudiantesDataSource">
+    </kendo-mobile-list-view>
+</kendo-mobile-view>
+
+<script id="estudianteTemplate" type="text/x-kendo-template">
+    <p> {{dataItem.fechaNacimiento}}</p>
+</script>

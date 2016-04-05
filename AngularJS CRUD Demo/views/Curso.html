@@ -1,0 +1,15 @@
+<!--<script src="../services/CursoServices.js"></script>
+<script src="../controllers/CursoController.js"></script>-->
+
+ 
+
+<kendo-mobile-view id="cursos" k-title="'Lista de Cursos'" k-layout="'default'" k-on-before-show="filterFeatured()" ng-controller="CursoController">
+    <kendo-mobile-list-view id="listaCursos" k-template="templates.cursoTemplate" k-data-source="CursoServices.cursosDataSource">
+    </kendo-mobile-list-view>
+</kendo-mobile-view>
+
+<script id="cursoTemplate" type="text/x-kendo-template">
+	<p> {{dataItem.id}}</p>
+    <p> {{dataItem.nombre}}</p>
+    <p> {{dataItem.horasCredito}}</p>
+</script>
